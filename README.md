@@ -4,7 +4,22 @@ This is designed to go in a folder called $HOME/Pictures/webcams.
 
 Currently, there are two files that control `wget` sequences, `cams10m.sh` and `cams15m.sh`. These were designed to work on the schedule of Hawaii Volcanoes webcams with different update intervals. You can change how you see fit.
 
-My setup was as follows:
+You'll want to edit one of the `cams*.sh` files to add your own webcams. Then you need to 
+`mkdir YOURFOLDER` and make sure `YOURFOLDER` is listed in the `cams` file, above the 
+`wget` command, like so:
+
+```
+cd YOURFOLDER
+wget http://YOUR.WEB.CAM.URL filename.jpg
+cd ..
+```
+
+The `filename.jpg` will be appended to a datestamp, so the `YOURFOLDER` folder will fill up 
+with files named like the following:
+`2018-05-10_002601_filename.jpg`
+
+You can then ask cron to take all those files and put them into a timelapse. My crontab is 
+as follows:
 
 `crontab -e`
 
@@ -19,4 +34,8 @@ My setup was as follows:
 9 6 * * * sleep 30; rm $HOME/Pictures/webcams/*/*.jpg # 9 minutes should be enough time
 ```
 
+By default, videos end up in a folder called `video0` inside the `YOURFOLDER` folder.
+
 You can check for duplicates in the current directory by calling `rmdup.sh`. You can also check for corrupted JPGs by calling `rmcorr.sh`.
+
+Questions? Let me know
