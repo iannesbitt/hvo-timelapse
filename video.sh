@@ -1,5 +1,6 @@
-cd /home/iannesbitt/Pictures/webcams
+cd $HOME/Pictures/webcams
 
+# inside the brackets are folder prefixes you want to create timelapses for
 ls -d {maunaloa,kilauea}*/ > dirs
 
 for fldr in $(cat dirs); do
@@ -8,7 +9,7 @@ for fldr in $(cat dirs); do
   count=`ls -1 *.jpg 2>/dev/null | wc -l`
   if [ $count != 0 ]
   then
-    timelapsehvo
+    ../timelapse
     #rm *.jpg
   fi
 

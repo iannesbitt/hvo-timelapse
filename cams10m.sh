@@ -3,28 +3,33 @@
 
 ## Kilauea
 # summit
-cd /home/iannesbitt/Pictures/webcams/kilauea-summit
+cd kilauea-summit
 ../get.sh https://volcanoes.usgs.gov/observatories/hvo/cams/KIcam/images/M.jpg summit.jpg
+cd ..
 
 # summit thermal
-cd /home/iannesbitt/Pictures/webcams/kilauea-thermal
+cd kilauea-thermal
 ../get.sh https://volcanoes.usgs.gov/observatories/hvo/cams/HTcam/images/M.jpg kthermal.jpg
+cd ..
 
 
 ## Mauna Loa
 # summit thermal
-cd /home/iannesbitt/Pictures/webcams/maunaloa-thermal
+cd maunaloa-thermal
 ../get.sh https://volcanoes.usgs.gov/observatories/hvo/cams/MTcam/images/M.jpg mlthermal.jpg
+cd ..
 
 # upper sw rift zone
-cd /home/iannesbitt/Pictures/webcams/maunaloa-swrzu
+cd maunaloa-swrzu
 ../get.sh https://volcanoes.usgs.gov/observatories/hvo/cams/M3cam/images/M.jpg mlswrzu.jpg
+cd ..
 
 # south pit
-cd /home/iannesbitt/Pictures/webcams/maunaloa-sp
+cd maunaloa-sp
 ../get.sh https://volcanoes.usgs.gov/observatories/hvo/cams/MOcam/images/M.jpg mosp.jpg
+cd ..
 
 # north pit
-cd /home/iannesbitt/Pictures/webcams/maunaloa-np
+cd maunaloa-np
 ../get.sh https://volcanoes.usgs.gov/observatories/hvo/cams/MLcam/images/M.jpg mlnp.jpg
-
+cd ..
