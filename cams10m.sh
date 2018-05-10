@@ -14,11 +14,6 @@ cd ..
 
 
 ## Mauna Loa
-# summit thermal
-cd maunaloa-thermal
-../get.sh https://volcanoes.usgs.gov/observatories/hvo/cams/MTcam/images/M.jpg mlthermal.jpg
-cd ..
-
 # upper sw rift zone
 cd maunaloa-swrzu
 ../get.sh https://volcanoes.usgs.gov/observatories/hvo/cams/M3cam/images/M.jpg mlswrzu.jpg
