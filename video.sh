@@ -9,6 +9,7 @@ for fldr in $(cat dirs); do
   count=`ls -1 *.jpg 2>/dev/null | wc -l`
   if [ $count != 0 ]
   then
+    ../rmcorr.sh
     ../timelapse
     #rm *.jpg
   fi
