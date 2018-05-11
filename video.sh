@@ -10,6 +10,7 @@ for fldr in $(cat dirs); do
   if [ $count != 0 ]
   then
     ../rmcorr.sh
+    ../rmdup.sh
     ../timelapse
     #rm *.jpg
   fi

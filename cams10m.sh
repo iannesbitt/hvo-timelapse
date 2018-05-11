@@ -28,3 +28,13 @@ cd ..
 cd maunaloa-np
 ../get.sh https://volcanoes.usgs.gov/observatories/hvo/cams/MLcam/images/M.jpg mlnp.jpg
 cd ..
+
+
+## Pu'u 'O'o
+cd po-thermal
+../get.sh https://volcanoes.usgs.gov/observatories/hvo/cams/PTcam/images/M.jpg poth.jpg
+cd ..
+
+cd po-east
+../get.sh https://volcanoes.usgs.gov/observatories/hvo/cams/PEcam/images/M.jpg poeast.jpg
+cd ..

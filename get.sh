@@ -8,5 +8,5 @@
 url=$1
 filename=$2
 
-wget $url -O $(date '+%Y-%m-%d_%H%M%S')_$filename
+wget $url -O $(date '+%Y-%m-%d_%H%M%SET')_$filename
 

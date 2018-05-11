@@ -5,10 +5,10 @@
 # Requires ffmpeg
 
 # frames per second
-FPS=10
+FPS=4
 
 # the file
-FILE=$(date '+%Y-%m-%d')-${PWD##*/}.mp4
+FILE=$(TZ=":Pacific/Honolulu" date '+%Y-%m-%dHST')-${PWD##*/}.mp4
 # the image repository
 LOC=$(pwd) # get current folder (default)
 # the repository
@@ -23,7 +23,7 @@ if [ -d "$LOC" ]; then
   # writes list of files, numbers each list item,
   # stores number and filename as vars, then renames files with numbering.
   # numbering is in %d format starting at 1.jpg
-  ls | cat -n | while read n f; do cp "$f" "$TMP/$n.jpg"; done
+  ls *.jpg | cat -n | while read n f; do cp "$f" "$TMP/$n.jpg"; done
   cd $TMP
   # converts filenames with %d format to 30fps mp4 starting at 1.jpg
   ffmpeg -y -start_number 1 -r $FPS  -i \%d.jpg -c:v libx264 "$DEST/$FILE"
