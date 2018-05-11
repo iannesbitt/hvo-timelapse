@@ -1,9 +1,9 @@
 # hvo-timelapse
 
 ### requirements
-Arch Linux or Ubuntu preferred, but MacOS may work (not tested)
-[`ffmpeg`](https://www.ffmpeg.org/)
-[`jpeginfo`](https://github.com/tjko/jpeginfo)
+- Arch Linux or Ubuntu preferred, but MacOS may work (not tested)
+- [`ffmpeg`](https://www.ffmpeg.org/)
+- [`jpeginfo`](https://github.com/tjko/jpeginfo)
 
 This is designed to go in a folder called $HOME/Pictures/webcams.
 
