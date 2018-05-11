@@ -1,5 +1,10 @@
 # hvo-timelapse
 
+### requirements
+Arch Linux or Ubuntu preferred, but MacOS may work (not tested)
+[`ffmpeg`](https://www.ffmpeg.org/)
+[`jpeginfo`](https://github.com/tjko/jpeginfo)
+
 This is designed to go in a folder called $HOME/Pictures/webcams.
 
 Currently, there are two files that control `wget` sequences, `cams10m.sh` and `cams15m.sh`. These were designed to work on the schedule of Hawaii Volcanoes webcams with different update intervals. You can change how you see fit.
@@ -38,6 +43,6 @@ as follows:
 
 By default, videos end up in a folder called `video0` inside the `YOURFOLDER` folder.
 
-You can check for duplicates in the current directory by calling `rmdup.sh`. You can also check for corrupted JPGs by calling `rmcorr.sh`.
+You can check for duplicates in the current directory by calling `rmdup.sh`. You can also check for corrupted JPGs by calling `rmcorr.sh`. This is done automatically by `video.sh` but could be useful for manual cleaning.
 
 Questions? Let me know
