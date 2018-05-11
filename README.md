@@ -30,8 +30,10 @@ as follows:
 */15 * * * * cd $HOME/Pictures/webcams/; ./cams15m.sh 2>&1 # get 15-minute webcams
 
 # timelapses (end up in $HOME/Pictures/webcams/*/video0/)
-0 6 * * * sleep 30; $HOME/Pictures/webcams/video.sh # timelapse script runs every day at 6am ET (12am HT)
-9 6 * * * sleep 30; rm $HOME/Pictures/webcams/*/*.jpg # 9 minutes should be enough time
+# the following two line checks 57 past every hour at whether it's 11:57 in Honolulu
+# if so, run the timelapse and jpg cleanup scripts successively
+# thanks to art-of-the-web.com (https://www.the-art-of-web.com/system/cron-set-timezone/)
+57 * * * * [ "$(TZ=":Pacific/Honolulu" date +\%H\%M)" == "2357" ] && $HOME/Pictures/webcams/video.sh && $HOME/Pictures/webcams/*/*.jpg
 ```
 
 By default, videos end up in a folder called `video0` inside the `YOURFOLDER` folder.
